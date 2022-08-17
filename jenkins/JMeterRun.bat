@@ -2,4 +2,4 @@
 
 set jmeter=C:\developer\JMeter\apache-jmeter-5.5\bin\jmeter.bat
 
-"%jmeter%" -e -n -t .\jenkins\jenkins.io.jmx -o .\jenkins\html -l .\result.jtl
+"%jmeter%" -e -n -t .\jenkins\jenkins.io.jmx -o html -l result.jtl
