@@ -1,0 +1,5 @@
+@echo off
+
+set jmeter=C:\developer\JMeter\apache-jmeter-5.5\bin\
+
+"%jmeter%" -e -n -t ${WORKSPACE}/jenkins.io.jmx -o html -l ${WORKSPACE}/jenkins/result.jtl
