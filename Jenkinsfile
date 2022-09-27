@@ -24,7 +24,7 @@ pipeline {
         	   		}
                 	             	          
                 	emailext mimeType: 'text/html', attachLog: false, attachmentsPattern: 'QmetryReport/report.7z',
-                	to: 'ali_ridho@manulife.com',
+                	to: 'lazio_karisma@manulife.com',
                 	body: '${FILE,path="templateBody.html"}',
                 	subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
                   
