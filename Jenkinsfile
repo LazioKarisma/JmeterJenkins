@@ -27,7 +27,7 @@ pipeline {
 		 }
 		
 	   post {
-		   success {
+		   always {
 		     archive (includes: 'pkg/*.gem')
 			// publish html
 			    publishHTML ([
