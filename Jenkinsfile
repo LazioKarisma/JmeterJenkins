@@ -4,7 +4,7 @@ pipeline {
   	tools { 
         maven 'maven_main'
         jdk 'jdk_main' 
-    }
+  }
 	
 	
     stages {
@@ -29,8 +29,8 @@ pipeline {
 		 }
 		
 	   post {
-		   always {
-		   archive (includes: 'pkg/*.gem')
+		   success {
+		     archive (includes: 'pkg/*.gem')
 			// publish html
 			    publishHTML ([
 				allowMissing: false,
@@ -46,9 +46,9 @@ pipeline {
 			body: '${FILE,path="templateBody.html"}',       
 			subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
 
-                  //	fileOperations([fileDeleteOperation(excludes: '', includes: 'C:/developer/JMeter/reports/html/report.7z')])
+                   //	fileOperations([fileDeleteOperation(excludes: '', includes: 'C:/developer/JMeter/reports/html/report.7z')])
 		   }
             }			 
 	 }
-	}
+     }
 }
