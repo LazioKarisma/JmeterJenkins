@@ -39,7 +39,7 @@ pipeline {
 				reportName: "Test Report Jmeter"
 			    ])
 			   
-			emailext mimeType: 'text/html', attachLog: false, attachmentsPattern: '',
+			emailext mimeType: 'text/html', attachLog: false, attachmentsPattern: 'html/index.html',
 			to: 'lazio_karisma@manulife.com',
 			body: '${FILE,path="templateBody.html"}',       
 			subject: "Jenkins Build ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
