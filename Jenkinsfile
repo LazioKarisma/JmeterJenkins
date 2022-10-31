@@ -16,8 +16,7 @@ pipeline {
 	        //fileOperations([folderCopyOperation(destinationFolderPath: 'html/content', sourceFolderPath: 'content')])
               	//fileOperations([folderCopyOperation(destinationFolderPath: 'html/sbadmin2-1.0.7', sourceFolderPath: 'sbadmin2-1.0.7')])
                 //fileOperations([fileCopyOperation(excludes: '', flattenFiles: false, includes: 'index.html', renameFiles: false, sourceCaptureExpression: '', targetLocation: 'html', targetNameExpression: '')])
-	         
-		     
+	            
 		 git url: 'https://github.com/LazioKarisma/JmeterJenkins.git', branch: 'master'
 	         bat "${WORKSPACE}/jenkins/JMeterRun.bat"
 	       
@@ -25,7 +24,6 @@ pipeline {
 			// dir('html'){
 			//  bat '7zip.bat'
 			//  }  
-				
 		 }
 		
 	   post {
